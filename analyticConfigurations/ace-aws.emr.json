@@ -1,0 +1,57 @@
+{
+  "analyticConfiguration" : {
+    "tenantId" : null,
+    "type" : "ACE",
+    "id" : null,
+    "packageId" : null,
+    "name" : "AWS EMR",
+    "scope" : {
+      "elementName" : null,
+      "elementType" : "EMR Cluster",
+      "elementTags" : null
+    },
+    "metrics" : [ {
+      "match" : "aws.elasticmapreduce.apps.*",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "aws.elasticmapreduce\\.(container|memory).*",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "aws.elasticmapreduce\\..*(nodes|blocks).*",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "aws.elasticmapreduce.hbasebackupfailed",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "aws.elasticmapreduce.s3.*",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "aws.elasticmapreduce.hdfs.*",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "aws.elasticmapreduce.totalload",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    } ]
+  }
+}

@@ -1,2 +1,9 @@
-# netuitive-packages-aws-emr
-A set of Netuitive analytics configurations, polices, dashboards, and reports that are used to monitor performance of AWS Elastic Map Reduce (EMR) resources.
+#netuitive.packages.aws.emr 1.0.0
+
+##Release History
+
+For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/AWS/new_aws_datasource.htm).
+
+###Version 1.0.0
+
+* Initial production release of the package for monitoring AWS Elastic MapReduce (EMR) resources.
