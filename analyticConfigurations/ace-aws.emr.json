@@ -8,7 +8,8 @@
     "scope" : {
       "elementName" : null,
       "elementType" : "EMR Cluster",
-      "elementTags" : null
+      "elementTags" : null,
+      "metricMatches" : null
     },
     "metrics" : [ {
       "match" : "aws.elasticmapreduce.apps.*",
