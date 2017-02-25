@@ -9,7 +9,8 @@
       "timeRangeDuration" : "3600",
       "density" : "normal",
       "refreshIntervalSeconds" : "300",
-      "wrap" : "true"
+      "wrap" : "true",
+      "gridstackContents": "[{\"id\":\"217b0350-cd81-4ddd-bd23-aeabf9d64cde\",\"x\":0,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"91dec722-2396-4e8d-801a-2c6a1fbdc147\",\"x\":4,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"9c977f41-eef6-4e7c-8c37-edfd68d79a75\",\"x\":8,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"8cf1a18b-bf86-4239-aa8f-c8672872c02b\",\"x\":0,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"a9655faf-41dc-468f-a8da-d1adc360bc91\",\"x\":6,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"9e72d228-edeb-4cac-9162-ba19267f9b04\",\"x\":0,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"3f478ad7-e3ea-4d51-adea-a5c67c39cd0e\",\"x\":6,\"y\":9,\"width\":6,\"height\":9}]"
     },
     "tenantId" : null,
     "userId" : null,
