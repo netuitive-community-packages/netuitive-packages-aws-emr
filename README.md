@@ -1,8 +1,12 @@
-#netuitive.packages.aws.emr 1.1.0
+#netuitive.packages.aws.emr 1.2.0
 
 ##Release History
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/aws.htm).
+
+###Version 1.2.0
+
+* Updated gridstack dashboard layouts
 
 ###Version 1.1.0
 
