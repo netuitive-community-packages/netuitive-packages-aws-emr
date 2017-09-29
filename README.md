@@ -1,8 +1,12 @@
-# netuitive.packages.aws.emr 1.2.0
+# netuitive.packages.aws.emr
 
 ## Release History
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/aws.htm).
+
+### Version next
+
+* Updated element details dashboard layout
 
 ### Version 1.2.0
 
