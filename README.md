@@ -4,7 +4,7 @@
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/aws.htm).
 
-### Version next
+### Version 1.3.0
 
 * Updated element details dashboard layout
 
