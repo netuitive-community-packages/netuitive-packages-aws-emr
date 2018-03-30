@@ -4,6 +4,10 @@
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/aws.htm).
 
+### Version next
+
+* Adjusted build to use metricly-cli for validation
+
 ### Version 1.3.0
 
 * Updated element details dashboard layout
