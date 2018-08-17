@@ -1,98 +1,104 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "METRIC_META",
-    "id" : null,
-    "packageId" : null,
-    "name" : "AWS EMR",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : "EMR Cluster",
-      "elementTags" : null,
-      "metricMatches" : null
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "aws.elasticmapreduce\\..*bytes.*",
+        "properties": {
+          "STATISTIC": "sum",
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "aws.elasticmapreduce.livedatanodes",
+        "properties": {
+          "tags": {
+            "unit": "percent"
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "aws.elasticmapreduce.hdfsutilization",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "aws.elasticmapreduce\\.(apps|container).*",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "match": "aws.elasticmapreduce.isidle",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          },
+          "validMax": 1
+        }
+      },
+      {
+        "match": "aws.elasticmapreduce\\.corenodes.*",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "match": "aws.elasticmapreduce\\.mr.*nodes$",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "match": "aws.elasticmapreduce\\..*blocks$",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "match": "aws.elasticmapreduce\\.memory.*mb$",
+        "properties": {
+          "tags": {
+            "unit": "mbytes"
+          }
+        }
+      },
+      {
+        "match": "aws.elasticmapreduce.capacityremaininggb",
+        "properties": {
+          "tags": {
+            "unit": "gbytes"
+          }
+        }
+      },
+      {
+        "match": "aws.elasticmapreduce\\..*backup.*",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      }
+    ],
+    "name": "AWS EMR",
+    "scope": {
+      "elementType": "EMR Cluster"
     },
-    "metrics" : [ {
-      "match" : "aws.elasticmapreduce\\..*bytes.*",
-      "properties" : {
-        "STATISTIC" : "sum",
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "aws.elasticmapreduce.livedatanodes",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "aws.elasticmapreduce.hdfsutilization",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent",
-          "utilization" : true
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "aws.elasticmapreduce\\.(apps|container).*",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-      "match" : "aws.elasticmapreduce.isidle",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        },
-        "validMax" : 1
-      }
-    }, {
-      "match" : "aws.elasticmapreduce\\.corenodes.*",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-      "match" : "aws.elasticmapreduce\\.mr.*nodes$",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-      "match" : "aws.elasticmapreduce\\..*blocks$",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-      "match" : "aws.elasticmapreduce\\.memory.*mb$",
-      "properties" : {
-        "tags" : {
-          "unit" : "mbytes"
-        }
-      }
-    }, {
-      "match" : "aws.elasticmapreduce.capacityremaininggb",
-      "properties" : {
-        "tags" : {
-          "unit" : "gbytes"
-        }
-      }
-    }, {
-      "match" : "aws.elasticmapreduce\\..*backup.*",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    } ]
+    "type": "METRIC_META"
   }
 }

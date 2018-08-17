@@ -1,209 +1,129 @@
 {
-  "dashboard" : {
-    "name" : "AWS EMR Cluster Element Detail Page",
-    "description" : null,
-    "layout" : null,
-    "properties" : {
-      "integrationType" : null,
-      "timeRangeDuration" : "3600",
-      "gridstackContents" : "[{\"id\":\"217b0350-cd81-4ddd-bd23-aeabf9d64cde\",\"x\":0,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"91dec722-2396-4e8d-801a-2c6a1fbdc147\",\"x\":6,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"9c977f41-eef6-4e7c-8c37-edfd68d79a75\",\"x\":0,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"8cf1a18b-bf86-4239-aa8f-c8672872c02b\",\"x\":0,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"a9655faf-41dc-468f-a8da-d1adc360bc91\",\"x\":0,\"y\":27,\"width\":12,\"height\":9},{\"id\":\"9e72d228-edeb-4cac-9162-ba19267f9b04\",\"x\":6,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"3f478ad7-e3ea-4d51-adea-a5c67c39cd0e\",\"x\":6,\"y\":18,\"width\":6,\"height\":9}]",
-      "refreshIntervalSeconds" : "300",
-      "wrap" : "true"
+  "dashboard": {
+    "name": "AWS EMR Cluster Element Detail Page",
+    "private": false,
+    "properties": {
+      "gridstackContents": "[{\"id\":\"217b0350-cd81-4ddd-bd23-aeabf9d64cde\",\"x\":0,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"91dec722-2396-4e8d-801a-2c6a1fbdc147\",\"x\":6,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"9c977f41-eef6-4e7c-8c37-edfd68d79a75\",\"x\":0,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"8cf1a18b-bf86-4239-aa8f-c8672872c02b\",\"x\":0,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"a9655faf-41dc-468f-a8da-d1adc360bc91\",\"x\":0,\"y\":27,\"width\":12,\"height\":9},{\"id\":\"9e72d228-edeb-4cac-9162-ba19267f9b04\",\"x\":6,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"3f478ad7-e3ea-4d51-adea-a5c67c39cd0e\",\"x\":6,\"y\":18,\"width\":6,\"height\":9}]",
+      "refreshIntervalSeconds": "300",
+      "timeRangeDuration": "3600",
+      "wrap": "true"
     },
-    "widgets" : [ {
-      "id" : "217b0350-cd81-4ddd-bd23-aeabf9d64cde",
-      "name" : "S3 Bytes Read and Written",
-      "description" : null,
-      "widgetType" : "multi-metric-time-series",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[\"EMR Cluster\"]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : null,
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[{\"fqn\":\"aws.elasticmapreduce.s3bytesread\",\"aggFn\":\"avg\",\"aggFns\":[\"avg\"]},{\"fqn\":\"aws.elasticmapreduce.s3byteswritten\",\"aggFn\":\"avg\",\"aggFns\":[\"avg\"]}]",
-        "selectedTab" : "table"
+    "type": "EMR CLUSTER",
+    "widgets": [
+      {
+        "id": "217b0350-cd81-4ddd-bd23-aeabf9d64cde",
+        "name": "S3 Bytes Read and Written",
+        "properties": {
+          "elementScopeTypes": "[\"EMR Cluster\"]",
+          "metricLimit": "10",
+          "metrics": "[{\"fqn\":\"aws.elasticmapreduce.s3bytesread\",\"aggFn\":\"avg\",\"aggFns\":[\"avg\"]},{\"fqn\":\"aws.elasticmapreduce.s3byteswritten\",\"aggFn\":\"avg\",\"aggFns\":[\"avg\"]}]",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "multi-metric-time-series"
+      },
+      {
+        "id": "91dec722-2396-4e8d-801a-2c6a1fbdc147",
+        "name": "HDFS Utilization",
+        "properties": {
+          "metricLimit": "10",
+          "metric_fqn": "aws.elasticmapreduce.hdfsutilization",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "visualization": "gauge",
+          "width": "medium"
+        },
+        "widgetType": "metric-status"
+      },
+      {
+        "id": "9c977f41-eef6-4e7c-8c37-edfd68d79a75",
+        "name": "Attributes",
+        "properties": {
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "element-attributes"
+      },
+      {
+        "id": "8cf1a18b-bf86-4239-aa8f-c8672872c02b",
+        "name": "Total Load (Concurrent Data Transfers)",
+        "properties": {
+          "metricLimit": "10",
+          "metric_fqn": "aws.elasticmapreduce.totalload",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "visualization": "gauge",
+          "width": "medium"
+        },
+        "widgetType": "metric-status"
+      },
+      {
+        "id": "a9655faf-41dc-468f-a8da-d1adc360bc91",
+        "name": "Events",
+        "properties": {
+          "elementScopeTypes": "[\"EMR Cluster\"]",
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "medium"
+        },
+        "widgetType": "event-ticker"
+      },
+      {
+        "id": "9e72d228-edeb-4cac-9162-ba19267f9b04",
+        "name": "HDFS Bytes Read and Written",
+        "properties": {
+          "elementScopeTypes": "[\"EMR Cluster\"]",
+          "metricLimit": "10",
+          "metrics": "[{\"fqn\":\"aws.elasticmapreduce.hdfsbytesread\",\"aggFn\":\"avg\",\"aggFns\":[\"avg\"]},{\"fqn\":\"aws.elasticmapreduce.hdfsbyteswritten\",\"aggFn\":\"avg\",\"aggFns\":[\"avg\"]}]",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "multi-metric-time-series"
+      },
+      {
+        "id": "3f478ad7-e3ea-4d51-adea-a5c67c39cd0e",
+        "name": "Tags",
+        "properties": {
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "medium"
+        },
+        "widgetType": "element-tags"
       }
-    }, {
-      "id" : "91dec722-2396-4e8d-801a-2c6a1fbdc147",
-      "name" : "HDFS Utilization",
-      "description" : null,
-      "widgetType" : "metric-status",
-      "properties" : {
-        "visualization" : "gauge",
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : "aws.elasticmapreduce.hdfsutilization",
-        "metricScopeTags" : "[]",
-        "width" : "medium",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "9c977f41-eef6-4e7c-8c37-edfd68d79a75",
-      "name" : "Attributes",
-      "description" : null,
-      "widgetType" : "element-attributes",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "8cf1a18b-bf86-4239-aa8f-c8672872c02b",
-      "name" : "Total Load (Concurrent Data Transfers)",
-      "description" : null,
-      "widgetType" : "metric-status",
-      "properties" : {
-        "visualization" : "gauge",
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : "aws.elasticmapreduce.totalload",
-        "metricScopeTags" : "[]",
-        "width" : "medium",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "a9655faf-41dc-468f-a8da-d1adc360bc91",
-      "name" : "Events",
-      "description" : null,
-      "widgetType" : "event-ticker",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[\"EMR Cluster\"]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : null,
-        "metricScopeTags" : "[]",
-        "width" : "medium",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "9e72d228-edeb-4cac-9162-ba19267f9b04",
-      "name" : "HDFS Bytes Read and Written",
-      "description" : null,
-      "widgetType" : "multi-metric-time-series",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "elementScopeTypes" : "[\"EMR Cluster\"]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[{\"fqn\":\"aws.elasticmapreduce.hdfsbytesread\",\"aggFn\":\"avg\",\"aggFns\":[\"avg\"]},{\"fqn\":\"aws.elasticmapreduce.hdfsbyteswritten\",\"aggFn\":\"avg\",\"aggFns\":[\"avg\"]}]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "3f478ad7-e3ea-4d51-adea-a5c67c39cd0e",
-      "name" : "Tags",
-      "description" : null,
-      "widgetType" : "element-tags",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : null,
-        "metricScopeTags" : "[]",
-        "width" : "medium",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    } ],
-    "type" : "EMR CLUSTER",
-    "private" : false
+    ]
   }
 }

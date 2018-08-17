@@ -1,38 +1,26 @@
 {
-  "policy" : {
-    "id" : null,
-    "name" : "AWS EMR - Idle Cluster Warning",
-    "description" : "The EMR cluster has been idle for at least the past hour.",
-    "scope" : {
-      "elementName" : null,
-      "elementNameExclude" : null,
-      "fqnIncludes" : [ ],
-      "fqnExcludes" : [ ],
-      "elementType" : "EMR Cluster",
-      "elementTags" : { }
-    },
-    "duration" : 3600,
-    "conditions" : [ {
-      "metric" : "aws.elasticmapreduce.isidle",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "actual",
-      "operator" : "==",
-      "level" : 1.0,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    } ],
-    "eventConditions" : [ ],
-    "actions" : [ {
-      "type" : "event",
-      "category" : 2
-    } ],
-    "enabled" : false,
-    "deleted" : false,
-    "originTenantId" : null,
-    "originPolicyId" : null,
-    "creatorEmail" : null,
-    "lastUpdated" : null
+  "policy": {
+    "actions": [
+      {
+        "category": 2,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "actual",
+        "level": 1,
+        "metric": "aws.elasticmapreduce.isidle",
+        "operator": "=="
+      }
+    ],
+    "deleted": false,
+    "description": "The EMR cluster has been idle for at least the past hour.",
+    "duration": 3600,
+    "enabled": false,
+    "name": "AWS EMR - Idle Cluster Warning",
+    "scope": {
+      "elementType": "EMR Cluster"
+    }
   }
 }
