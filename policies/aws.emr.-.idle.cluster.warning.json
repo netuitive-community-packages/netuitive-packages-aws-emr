@@ -20,7 +20,9 @@
     "enabled": false,
     "name": "AWS EMR - Idle Cluster Warning",
     "scope": {
-      "elementType": "EMR Cluster"
+      "elementTypes": [
+        "EMR Cluster"
+      ]
     }
   }
 }
